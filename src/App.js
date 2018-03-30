@@ -1,10 +1,7 @@
 import React, {Component} from 'react';
-import ImageLoader from 'react-load-image';
 import './App.css';
-import spinner from './spinner.svg';
 import {fetchAPI} from './services/fetchDataFromAPI';
-
-const Preloader = () => (<img alt="" src={spinner}/>);
+import CartItem from './components/CartItem';
 
 class App extends Component {
 
@@ -30,21 +27,9 @@ class App extends Component {
         </header>
         <div className="App-intro">
           {data && data.items && data.items.length && data.items.map(item =>
-            <span className="item" key={item.name}>
-              <div className="item-img">
-                <ImageLoader src={item.img}>
-                  <img alt=""/>
-                  <div>Error!</div>
-                  <Preloader/>
-                </ImageLoader>
-              </div>
-              <div>
-                {item.name}
-              </div>
-              <div>
-              {item.price}
-              </div>
-            </span>
+            <CartItem
+              key={item.name}
+              item={item}/>
           )}
         </div>
       </div>
