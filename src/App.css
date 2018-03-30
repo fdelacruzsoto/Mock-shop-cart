@@ -1,13 +1,19 @@
+:root {
+  --dark-color: #546E7A;
+  --size-50: 50px;
+  --light-color: white;
+}
+
 .App {
   text-align: center;
 }
 
 
 .App-header {
-  background-color: #546E7A;
+  background-color: var(--dark-color);
   height: 25px;
   padding: 10px;
-  color: white;
+  color: var(--light-color);
 }
 
 .App-title {
@@ -15,21 +21,21 @@
 }
 
 h1{
-  margin: 0px;
+  margin: 0;
 }
 
 .item {
-  height: 50px;
+  height: var(--size-50);
 }
 
 .item-img {
-  height: 50px;
-  width: 50px;
+  height: var(--size-50);
+  width: var(--size-50);
 }
 
 img {
-  height: 50px;
-  width: 50px;
+  height: var(--size-50);
+  width: var(--size-50);
 }
 
 .App-intro {
